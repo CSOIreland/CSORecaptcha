@@ -89,24 +89,24 @@ namespace CSO.Recaptcha
                 var responseObject = JsonConvert.DeserializeObject<dynamic>(responseString, new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.None }); 
                 var responseSuccess = (string)responseObject["success"];
 
-                LogObject.Instance.Info("Server Response: " + responseString);
+                LogObject.Info("Server Response: " + responseString);
 
                 if (responseSuccess.ToLowerInvariant() == "true")
                 {
                     // All good and valid
-                    LogObject.Instance.Info("Valid Encoded Response: " + encodedResponse);
+                    LogObject.Info("Valid Encoded Response: " + encodedResponse);
                     return true;
                 }
                 else
                 {
                     // Something went wrong
-                    LogObject.Instance.Info("Invalid Encoded Response: " + encodedResponse);
+                    LogObject.Info("Invalid Encoded Response: " + encodedResponse);
                     return false;
                 }
             }
             catch (Exception e)
             {
-                LogObject.Instance.Fatal(e);
+                LogObject.Fatal(e);
                 return false;
             }
         }

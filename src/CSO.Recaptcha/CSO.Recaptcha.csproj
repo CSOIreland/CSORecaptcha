@@ -12,12 +12,12 @@
     <PackageId>CSO.Recaptcha</PackageId>
     <Product>CSO Recaptcha</Product>
     <Copyright>Central Statistics Office, Ireland</Copyright>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <Authors>Central Statistics Office, Ireland</Authors>
     <SignAssembly>False</SignAssembly>
     <RepositoryUrl>https://github.com/CSOIreland/CSORecaptcha</RepositoryUrl>
     <PackageReleaseNotes>
-      - [INFO] initial release of CSO standalone recaptcha library
+      - [bug fix] removed logobject.instance references. 
     </PackageReleaseNotes>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
     <RestoreLockedMode>true</RestoreLockedMode>
